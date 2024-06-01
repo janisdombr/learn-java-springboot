@@ -1,0 +1,20 @@
+server:
+  port: 3000
+spring:
+  name: learn-java-springboot
+  datasource:
+    url: jdbc:postgresql://db:5432/auto
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+  main:
+    web-application-type: servlet
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yml
